@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  --main-color: #e8ecf4;
+  --dashboard-color: #2094d4;
+  --padding-right: 80px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto 6fr;
+}
+
+.left {
+  background-color: var(--dashboard-color);
+  color: white;
+  padding-left: 24px;
+  grid-area: 1 / 1 / 3 / 2;
+  overflow: hidden;
+}
+
+.right {
+  grid-area: 1 / 2 / 3/ 4;
+}
+
+.header {
+  grid-area: 1 / 2 / 2 / 4;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.main-content {
+  grid-area: 2 /2 / 3 / 4;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  background-color: var(--main-color);
+}
+
+.dashboard {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  font-size: min(2rem, 1.2vw);
+  gap: 16px;
+}
+
+.logo {
+  margin-left: -14px;
+}
+
+.d-icon {
+  height: 3rem;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  margin-right: 24px;
+}
+
+#dashboard-logo {
+  height: 5rem;
+  margin-right: 0px;
+}
+
+.dashboard:has(a[title="Settings"]) {
+  margin-top: 56px;
+}
+
+.dashboard:has(img[id="dashboard-logo"]) {
+  margin-bottom: 56px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 24px var(--padding-right) 8px var(--padding-right);
+  gap: 12px;
+}
+
+.h-icon {
+  height: 3rem;
+}
+
+.search-container {
+  flex: 1;
+}
+
+input {
+  height: 40px;
+  background-color: var(--main-color);
+  padding: 8px 24px 8px 36px;
+  font-size: 16px;
+  border-radius: 16px;
+  width: 90%;
+  border-style: none;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  padding-left: var(--padding-right);
+  padding-right: var(--padding-right);
+  gap: 16px;
+}
+
+.welcome {
+  flex: 1;
+}
+
+.button-list {
+  display: flex;
+  gap: 48px;
+  justify-self: flex-end;
+}
+
+.button {
+  background-color: var(--dashboard-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 36px;
+  border-style: none;
+  width: 9rem;
+  font-size: 1.5rem;
+}
+
+.projects,
+.announcements {
+  padding: 32px;
+}
+
+.announcements {
+  padding-right: var(--padding-right);
+}
+
+.card-container {
+  margin-top: 32px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+  padding: 32px;
+  background-color: white;
+  font-size: 1.5rem;
+  border-left: 12px solid #f0b429;
+  border-radius: 12px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 9px -8px black;
+}
+
+.card-body p {
+  color: gray;
+  font-size: 20px;
+}
+
+.card-body {
+  overflow: auto;
+}
+
+.card-body::-webkit-scrollbar,
+.notice-body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.c-icon {
+  height: 2rem;
+}
+
+.card-links {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  align-self: flex-end;
+}
+
+.announcements-container {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background-color: white;
+  padding: 48px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  box-shadow: 0 8px 9px -8px black;
+}
+
+.notice {
+  border: 1px solid #ccc;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.top {
+  padding-top: 0px;
+}
+.bottom {
+  border: 0px;
+}
+
+.notice-header {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.notice-body {
+  max-height: 100px;
+  overflow: auto;
+  color: gray;
+}
+
+.trending-container {
+  margin-top: 32px;
+  background-color: white;
+  padding: 48px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 9px -8px black;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.profile {
+  font-size: 1.3rem;
+}
+
+.profile-description {
+  color: gray;
+}
