@@ -1,11 +1,14 @@
 # Admin-dashboard
 
-Basic dashboard with search bar headers, nav sidebar, and main content
+- Basic dashboard with search bar headers, nav sidebar, and main content
 
-# My projects
+## Live Demo
+- [Demo](https://shawnnyu.github.io/admin-dashboard/)
 
-https://shawnnyu.github.io/portfolio/
+## My projects
+
+- [Portfolio](https://shawnnyu.github.io/portfolio/)
 
 ### Trending photos source:
 
-https://www.pexels.com/search/galaxy/
+- https://www.pexels.com/search/galaxy/
